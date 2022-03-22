@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+
+
+
+<html>
+    <head>
+        <title>Course</title>
+    </head>
+    <body>
+    The list of courses provided by the GA program
+        {% for c in courses%}
+            <br>
+            <div>
+                <h1>{{c.title.}}</h1>
+                <br>
+                <h2>Starting Date: {{c.startdate}}</h2>
+                {{c.description}}
+            </div>
+        {% endfor %}
+
+    </body>
+</html>

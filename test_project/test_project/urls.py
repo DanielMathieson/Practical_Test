@@ -15,7 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls import include
+from ga_courses import views
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
+    path('', views.course, name="course"),
+    path('ga_courses/', include('ga_courses.urls')),
+    # The above maps any URLs starting with ga_courses/ to be handled by ga_courses.
     path('admin/', admin.site.urls),
 ]
+
