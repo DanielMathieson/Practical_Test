@@ -1,9 +1,9 @@
 from django.urls import path
-from ga_courses import views
+import views as v
 
 app_name = 'ga_courses'
 
 urlpatterns = [
-path('', views.course, name='course'),
+path('', v.course, name='course'),
 
 ]
